@@ -1,5 +1,7 @@
 package jana60;
-//libreria scan
+//DECIMAL FORMAT
+import java.text.DecimalFormat;
+//LIBRERIA SCANNER
 import java.util.Scanner;
 
 public class CalcolaBiglietto {
@@ -12,11 +14,14 @@ public class CalcolaBiglietto {
 		//APERTURA SCAN (SE NN SI APRE E CHIUDE NON FUNZIONA)
 		Scanner scan = new Scanner(System.in);
 		
+		//CREAZIONE DECIMAL FORMAT
+		DecimalFormat df= new DecimalFormat ("#0.0020");
+		
 		//COMANDI UTENTE
-	    System.out.println("Quanti Kilometri vuou percorrere?");
+	    System.out.println("Quanti Kilometri vuoI percorrere?");
 		kilometriDaPercorrere = scan.nextFloat();
 		
-		System.out.println("Quanti hanni ha il passeggero ?");
+		System.out.println("Quanti anni ha il passeggero ?");
 		EtaPasseggero = scan.nextInt();
 		
 		
@@ -42,7 +47,7 @@ public class CalcolaBiglietto {
 			
 		}
 		
-		System.out.println("Il prezzo finale del biglietto con lo sconto applicato è " + PrezzoFinale );
+		System.out.println("Il prezzo finale del biglietto con lo sconto applicato è " + df.format (PrezzoFinale));
 		
 	
 		
